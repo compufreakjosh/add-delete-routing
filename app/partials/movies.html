@@ -1,0 +1,28 @@
+<div>
+    <input type="text" ng-model="newMovie.name" placeholder="A movie Name">
+    <input type="number" ng-model="newMovie.releaseYear" placeholder="Release Year">
+    <input type="text" ng-model="newMovie.averageRating" placeholder="Average Rating">
+    <button ng-click="addNewMovie(newMovie)">Add Item</button><br>
+    <input ng-model="search" placeholder="Search">
+    <hr>
+    
+    <table>
+      <tr>
+        <th>Movie Name</th>
+        <th>Release year</th>
+        <th>Average Rating</th>
+        <th>&nbsp;</th>
+      </tr>
+
+      <tr ng-repeat="movie in movies | filter:search track by $index">
+        <td>{{movie.name}}</td>
+        <td>{{movie.releaseYear}}</td>
+        <td>{{movie.averageRating}}</td>
+        <td><button ng-click="removeMovie($index)">Delete</button></td>
+        <td><a href="#/movie/delete/{{$index}}">Delete</a></td>
+        
+      </tr>
+    </table>
+    <hr>
+    </div>
+</div>
