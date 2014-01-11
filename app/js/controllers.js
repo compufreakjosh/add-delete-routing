@@ -22,19 +22,12 @@ angular.module('myApp.controllers', []).
         			};
         moviesService.addNewMovie(movie);
     }
-    $scope.removeMovie = function(movieId){
-        var movie = {id: movieId};
-        moviesService.removeMovie(movie);
-    }
   })
-  .controller("MovieDeleteCtrl", ['$scope','moviesService','$routeParams', function($scope, $routeParams, moviesService){
+  .controller("MovieDeleteCtrl", ['$scope','$routeParams','moviesService', function($scope, $routeParams, moviesService){
 	  //Executes when the controller is created
 	  $scope.movies = moviesService.movies;  
 	  console.log("In delete controller");
-	  $scope.movieId = $routeParams.movieId;
-	    
-	  $scope.removeMovie = function(movieId){
-	        var movie = {id: movieId};
-	        moviesService.removeMovie(movie);
-	    }
+	  var movieId = $routeParams.movieId;
+	  var movie = {id: movieId};
+	  moviesService.removeMovie(movie);
 	  }]);
