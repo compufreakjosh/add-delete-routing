@@ -24,8 +24,8 @@ angular.module('myApp.services', []).
         _movies.splice(0, 0, movie);
     }
     var _removeMovie = function(idx){
-    	var person_to_delete = _movies[idx];
-    	_movies.splice(idx, 1);
+    	var person_to_delete = _movies[idx.id];
+    	_movies.splice(idx.id, 1);
     	/*
     	angular.forEach(_movies, function(value, key){
     		if(value.id == movie.id){
