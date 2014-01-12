@@ -36,7 +36,7 @@ angular.module('myApp.services', []).
     }
 
     return{
-        movies: _movies,
+        movies: _movies,   // revealing module pattern applied here 
         getMovies: _getMovies,
         addNewMovie: _addNewMovie,
         removeMovie:_removeMovie
