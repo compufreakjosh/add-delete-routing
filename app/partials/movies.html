@@ -15,9 +15,9 @@
       </tr>
 
       <tr ng-repeat="movie in movies | filter:search track by $index">
-        <td>{{movie.name}}</td>
-        <td>{{movie.releaseYear}}</td>
-        <td>{{movie.averageRating}}</td>
+        <td><edit-in-place value="movie.name"></edit-in-place></td>
+        <td><edit-in-place value="movie.releaseYear"></edit-in-place></td>
+        <td><edit-in-place value="movie.averageRating"></edit-in-place></td>
         <td><a href="#/movie/delete/{{$index}}">Delete</a></td>
         
       </tr>
