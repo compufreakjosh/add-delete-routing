@@ -6,22 +6,26 @@
     <input ng-model="search" placeholder="Search">
     <hr>
     
-    <table>
-      <tr>
-        <th>Movie Name</th>
-        <th>Release year</th>
-        <th>Average Rating</th>
-        <th>&nbsp;</th>
-      </tr>
-
-      <tr ng-repeat="movie in movies | filter:search track by $index">
-        <td><edit-in-place value="movie.name"></edit-in-place></td>
-        <td><edit-in-place value="movie.releaseYear"></edit-in-place></td>
-        <td><edit-in-place value="movie.averageRating"></edit-in-place></td>
-        <td><a href="#/movie/delete/{{$index}}">Delete</a></td>
-        
-      </tr>
-    </table>
+    <div class="datagrid">
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Release year</th>
+                    <th>Average Rating</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-class="{alt: $even, odd: $odd}" ng-repeat="movie in movies | filter:search track by $index">
+                    <td><edit-in-place value="movie.name"></edit-in-place></td>
+                    <td><edit-in-place value="movie.releaseYear"></edit-in-place></td>
+                    <td><edit-in-place value="movie.averageRating"></edit-in-place></td>
+                    <td><a href="#/movie/delete/{{$index}}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <hr>
     </div>
 </div>
