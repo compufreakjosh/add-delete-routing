@@ -9,6 +9,19 @@ angular.module('myApp.directives', []).
       elm.text(version);
     };
   }])
+  .directive( 'fbimage', function() {
+	  return {
+		     restrict: 'E',
+		     link:function(scope, element, attrs) {
+		       var fbid = attrs.fbid;
+		       var tag = '';
+		       if ((fbid !== null) && (fbid !== undefined) && (fbid !== '')) {
+		    	      tag = '<img src="http://graph.facebook.com/' + fbid + '/picture?type=large" class="img-responsive"/>'
+		       }
+		       element.append(tag);
+		     }
+		   }
+  })
   .directive( 'editInPlace', function() {
   return {
     restrict: 'E',
@@ -44,5 +57,4 @@ angular.module('myApp.directives', []).
       });
     }
   };
-});
-
+})
