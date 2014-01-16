@@ -12,6 +12,7 @@ angular.module('myApp.controllers', []).
   .controller("WeatherCtrl", function ($scope, weatherService){
     //Executes when the controller is created
     $scope.Weather = {};
+    $scope.selectedCity = 'Cambridge';
     $scope.getWeather = function(){
         $scope.Weath = weatherService.getWeather($scope.selectedCity).then(
         		function (data) {
