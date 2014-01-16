@@ -7,8 +7,20 @@ angular.module('myApp.controllers', []).
 
   }])
   .controller('MyCtrl2', [function() {
-
+	  
   }])
+  .controller("WeatherCtrl", function ($scope, weatherService){
+    //Executes when the controller is created
+    $scope.Weather = {};
+    $scope.getWeather = function(){
+        $scope.Weath = weatherService.getWeather($scope.selectedCity).then(
+        		function (data) {
+                    $scope.Weather = data;
+                });
+    }
+    $scope.getWeather();
+  })
+
   .controller("MoviesCtrl", function ($scope, moviesService){
     //Executes when the controller is created
     $scope.movies = moviesService.movies;

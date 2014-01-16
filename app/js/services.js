@@ -7,6 +7,17 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', []).
   value('version', '0.1')
+  .factory("weatherService", function($http, Restangular){
+    var _getWeather = function (selectedCity) {
+    	var WeatherData =  Restangular.one('weather').get({q: selectedCity});
+        //var url = "http://api.openweathermap.org/data/2.5/weather?q=" + selectedCity + "&callback=JSON_CALLBACK";
+        return WeatherData;
+    }
+    
+    return{
+        getWeather: _getWeather,
+    };
+})
   .factory("moviesService", function($http){
     var _movies = [];
 
@@ -42,4 +53,5 @@ angular.module('myApp.services', []).
         removeMovie:_removeMovie
     };
 });
+
 

@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 class="text-center">Weather Information</h1>
+    <pre><b>Choose a city:</b> <select ng-model="selectedCity" ng-change="getWeather()" class="select-space">
+            <option value="Cambridge">Cambridge</option>
+            <option value="London">London</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Salford">Salford</option>
+        </select>
+     </pre>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <tr>
+                <th width="60%">Name</th>
+                <td width="40%">{{Weather.name}}</td>
+            </tr>
+            <tr>
+                <th>Temperature</th>
+                <td>{{Weather.main.temp}}° F</td>
+            </tr>
+            <tr>
+                <th>Min. Temperature</th>
+                <td>{{Weather.main.temp_min}}° F</td>
+            </tr>
+            <tr>
+                <th>Max. Temperature</th>
+                <td>{{Weather.main.temp_max}}° F</td>
+            </tr>
+            <tr>
+                <th>Humidity</th>
+                <td>{{Weather.main.humidity}} %</td>
+            </tr>
+            <tr>
+                <th>Pressure</th>
+                <td>{{Weather.main.pressure}} hpa</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{Weather.weather[0].description}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<style>
+    .select-space
+    {
+        padding: 6px 4px;
+    }
+</style>
