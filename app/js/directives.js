@@ -9,6 +9,19 @@ angular.module('myApp.directives', []).
       elm.text(version);
     };
   }])
+  .directive( 'capitalize', function() {
+	  return {
+		     restrict: 'E',
+		     template: '{{anyelement|uppercase}}'
+		   }
+  })
+  .directive( 'reverse', function() {
+	  return {
+		     restrict: 'E',
+		     template: "{{anyelement.split('').reverse().join('')}}"
+		   }
+  })
+  
   .directive( 'wish', function() {
 	  return {
 		     restrict: 'E',
