@@ -14,7 +14,7 @@ angular.module('myApp.controllers', []).
     $scope.Weather = {};
     $scope.selectedCity = 'Cambridge';
     $scope.getWeather = function(){
-        $scope.Weath = weatherService.getWeather($scope.selectedCity).then(
+        weatherService.getWeather($scope.selectedCity).then(
         		function (data) {
                     $scope.Weather = data;
                 });
