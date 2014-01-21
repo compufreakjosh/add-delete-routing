@@ -1,0 +1,103 @@
+body{
+	padding: 10px;
+	margin: 10px;
+	font:1.2em arial, helvetica, sans-serif;
+}
+masthead{
+	display:block;
+	height:30px;
+	background-color: silver;
+}
+registration-area{
+	float:left;
+	font-size: 1em
+}
+registration-area div.registration-item{
+	float: right; 
+	padding: 5px 5px; 
+	margin-left: 5px;
+}
+registration-area div.registration-item a{
+	color:white;
+	text-decoration: none;
+	padding:5px;
+}
+
+registration-area div.registration-item a:hover{
+	background-color: coral;
+	border-radius:25px;
+	-moz-border-radius:25px;	
+	-webkit-border-radius:25px;	
+};
+
+cover-container{
+	background-color:yellow;
+	display:block;
+}
+cover-container cover-pic{
+	background:url(images/mobile_icon.png);
+	background-repeat: no-repeat; 
+	background-size:device-width;
+	display:block;
+	height:300px;
+	float:left;
+}
+cover-container tile-container{
+	background-color:coral;
+	display:block;
+	width: auto;
+}
+cover-container tile-container tile-row{
+	background-color:red;
+	display:block;
+}
+cover-container tile-container tile-row tile{
+	background-color:black;
+	color:white;
+	display:block;
+	float:left;
+	height: 70px;
+	width:149px;
+	padding:10px;
+	margin-left:12px;
+	margin-right:4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div.content{
+	padding: 10px;
+	float:left;
+	margin-top: 5px;
+}
+div.column{
+	width:290px;
+	float:left;
+	background-color: white;
+	padding:5px;
+	margin:5px;
+
+}
+
+footer{
+	display: block;
+	float:left;
+	background: black url(images/brushed_steel_texture_sml.jpg);
+	padding:10px;
+}
+.footer-column{
+	background-color: indigo;
+	opacity: 0.72;
+	color:white;
+	width:290px;
+	float: left;
+	padding:5px;
+	margin:5px;
+}
+ul.footer-links a{
+	opacity: 0.90;
+	color:white;
+}
+.clear{
+	clear:both;
+	height:0px;
+};
