@@ -1,0 +1,68 @@
+@media (max-width: 480px) {
+    h1.tagline {
+      padding-bottom: 0px; 
+      padding-top: 0px; 
+      padding-left: 20px;
+      margin-top: 30px; 
+    }
+}
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+}
+
+/* change the URL to a picture of your choice - the higher quality the better! */
+.business-header {
+	height: 300px;
+	background: url(../images/home-about-bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+/* adjust the color and text shadow to optimize legibility once you have an image set - you can also change the vertical positioning if desired  */
+.tagline {
+	background-color: rgba(0, 0, 0, 0.3);
+    border: 20px solid #F58A1F;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 3.4375em;
+    font-weight: 70;
+    margin: 50px 40px 30px;
+    padding: 22px 48px;
+    position: relative;
+    text-transform: uppercase;
+}
+.brand-logo{
+	background: url(../images/logo-3pillar.png) center center no-repeat;
+	height:54px;
+	width:180px;
+	padding:5px;
+}
+.card{
+	color:#FFFFFF;
+	padding:22px 36px;
+	height: 26.75em;
+	border-left:1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+.card h4{
+	border-bottom: 1px solid #FFFFFF;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.card p {
+	font-size: 2.31em;
+	font-weight: 70;
+	text-transform: uppercase;
+
+}
+.card.what {
+	background-color: #213B8D
+}
+.card.how {
+	background-color: #F58A1F
+}
+.card.who {
+	background-color: #3A4655
+}
+footer {
+	margin: 50px 0;
+}
+
